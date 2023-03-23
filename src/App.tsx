@@ -1,4 +1,9 @@
 import { SiGithub, SiDiscord } from "react-icons/si"
+import { HomePageImages } from "./constant/imgsUrl";
+import { features } from "./constant/features";
+import { Feature } from "./interfaces/feature.interface";
+
+
 function App() {
   return (
     <div className="flex flex-col h-screen">
@@ -15,65 +20,60 @@ function App() {
           </div>
         </div>
       </nav>
-      <header className="flex-grow flex items-center justify-center py-16">
+      <header className="py-16">
+
         <div className="mx-auto px-4">
           <h1 className="text-6xl font-bold text-center text-gray-900 mb-8">dnsChanger-desktop</h1>
-          <p className="text-2xl text-center text-gray-700 mb-8">با dnsChanger-desktop می‌توانید DNS رایانه شخصی خود را تغییر داده و از سایت‌های مسدود شده داخل کشور بازدید کنید.</p>
-          <div className="flex flex-row gap-4">
-            <div>
-              <img src="https://img.shields.io/github/downloads/DnsChanger/dnsChanger-desktop/total.svg" />
-            </div>
-            <div>
-              <img src="https://img.shields.io/github/languages/top/DnsChanger/dnsChanger-desktop" />
-            </div>
-            <div>
-              <img src="https://img.shields.io/github/languages/count/DnsChanger/dnsChanger-desktop" />
+          <p className="text-2xl text-center text-gray-700 mb-8">با dnsChanger-desktop می‌توانید DNS رایانه شخصی خود را تغییر داده و از سایت‌های تحریم شده از داخل کشور بازدید کنید.</p>
+        </div>
+
+        <div className="mt-10">
+          <div className="flex items-center">
+            <div className="flex flex-grow justify-center gap-1" dir="ltr">
+              <div>
+                <img src="https://img.shields.io/github/downloads/DnsChanger/dnsChanger-desktop/total.svg" />
+              </div>
+              <div>
+                <img src="https://img.shields.io/github/stars/dnsChanger/dnsChanger-desktop" />
+              </div>
             </div>
           </div>
-          <div className="mt-10 container">
+          <div className="mt-10 flex flex-col items-center gap-10">
             <div>
               <a href="https://github.com/DnsChanger/dnsChanger-desktop/releases/tag/v1.3.0" target="_blank" className="bg-blue-500  hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg">نصب dnsChanger-desktop</a>
             </div>
+            <div >
+              <span className="text-gray-500">  بعد از نصب ⭐ فراموش نشه :)</span>
+            </div>
           </div>
         </div>
+
       </header>
 
       <section className="bg-gray-200 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">ویژگی‌های dnsChanger-desktop</h2>
           <div className="flex flex-wrap justify-center">
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">تغییر آسان DNS رایانه شخصی</div>
-                <p className="text-gray-700 text-base">
-                  با dnsChanger-desktop به سادگی می‌توانید DNS رایانه خود را تغییر دهید.
-                </p>
-              </div>
-            </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">پشتیبانی از DNS مختلف</div>
-                <p className="text-gray-700 text-base">
-                  dnsChanger-desktop از بیش از ۳۰۰۰ DNS مختلف پشتیبانی می‌کند.
-                </p>
-              </div>
-            </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">بدون محدودیت سرعت</div>
-                <p className="text-gray-700 text-base">
-                  dnsChanger-desktop هیچگونه محدودیتی در سرعت اینترنت شما ایجاد نمی‌کند.
-                </p>
-              </div>
-            </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">حفاظت از حریم شخصی</div>
-                <p className="text-gray-700 text-base">
-                  با استفاده از dnsChanger-desktop، از جمله امکانات مفید حفاظت از حریم شخصی کاربر است.
-                </p>
-              </div>
-            </div>
+            {
+              features.map((feature: Feature) => {
+                return (
+                  <div className="max-w-sm  overflow-hidden shadow-lg bg-white m-4 rounded-2xl">
+                    <div className="max-w-sm rounded overflow-hidden shadow-2xl bg-white m-4 flex items-center hover:relative hover:bottom-2">
+                      <div className="p-4">
+                        <feature.icon className="text-gray-600 text-2xl" />
+                      </div>
+                      <div className="flex-grow p-4">
+                        <div className="font-bold text-xl mb-2">{feature.title}</div>
+                        <p className="text-gray-700 text-base">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            }
+
           </div>
         </div>
       </section>
@@ -82,18 +82,15 @@ function App() {
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">تصاویر dnsChanger-desktop</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="max-w-sm rounded overflow-hidden shadow-lg">
-              <img src="https://github.com/DnsChanger/dnsChanger-desktop/raw/main/github/scr1.png" alt="تصویر ۱" className="w-full" />
-            </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg">
-              <img src="https://github.com/DnsChanger/dnsChanger-desktop/raw/main/github/scr2.png" alt="تصویر ۲" className="w-full" />
-            </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg">
-              <img src="https://github.com/DnsChanger/dnsChanger-desktop/raw/main/github/scr3.png" alt="تصویر ۳" className="w-full" />
-            </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg">
-              <img src="https://github.com/DnsChanger/dnsChanger-desktop/raw/main/github/scr4.png" alt="تصویر ۴" className="w-full" />
-            </div>
+            {
+              HomePageImages.map((imgSrc: string, index: number) => {
+                return (
+                  <div className="max-w-sm rounded overflow-hidden shadow-lg hover:shadow-black">
+                    <img src={imgSrc} alt={`image ${index + 1}`} className="w-full" />
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </section>
