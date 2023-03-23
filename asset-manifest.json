@@ -1,15 +1,37 @@
 {
   "files": {
-    "main.css": "/DnsChanger.github.io/static/css/main.13fc8ec7.css",
-    "main.js": "/DnsChanger.github.io/static/js/main.e64ee4b5.js",
-    "static/js/787.b6dd783b.chunk.js": "/DnsChanger.github.io/static/js/787.b6dd783b.chunk.js",
-    "index.html": "/DnsChanger.github.io/index.html",
-    "main.13fc8ec7.css.map": "/DnsChanger.github.io/static/css/main.13fc8ec7.css.map",
-    "main.e64ee4b5.js.map": "/DnsChanger.github.io/static/js/main.e64ee4b5.js.map",
-    "787.b6dd783b.chunk.js.map": "/DnsChanger.github.io/static/js/787.b6dd783b.chunk.js.map"
+    "main.css": "/static/css/main.7079fdc6.css",
+    "main.js": "/static/js/main.fe5b27a2.js",
+    "static/js/787.b6dd783b.chunk.js": "/static/js/787.b6dd783b.chunk.js",
+    "static/media/Vazir-Light.eot": "/static/media/Vazir-Light.dd27df7f828b4a65cede.eot",
+    "static/media/Vazir-Light.ttf": "/static/media/Vazir-Light.cbb41bbc80aabe4a8be5.ttf",
+    "static/media/Vazir-Bold.eot": "/static/media/Vazir-Bold.ce0efe6cea93b773470c.eot",
+    "static/media/Vazir-Black.eot": "/static/media/Vazir-Black.f7e509df705527e74213.eot",
+    "static/media/Vazir-Bold.ttf": "/static/media/Vazir-Bold.6ca8f81989073f9a7f7b.ttf",
+    "static/media/Vazir-Black.ttf": "/static/media/Vazir-Black.88dbe0e03df0e3071026.ttf",
+    "static/media/Vazir-Thin.eot": "/static/media/Vazir-Thin.3a5db120e4b9dce37b1b.eot",
+    "static/media/Vazir-Thin.ttf": "/static/media/Vazir-Thin.7bcf286deff6dd707224.ttf",
+    "static/media/Vazir-Regular.eot": "/static/media/Vazir-Regular.6ac404eb3f53dd9ce67f.eot",
+    "static/media/Vazir-Regular.ttf": "/static/media/Vazir-Regular.a24d67ce7f999b3cef04.ttf",
+    "static/media/Vazir-Light.woff": "/static/media/Vazir-Light.caa9f23dbd02e18916b0.woff",
+    "static/media/Vazir-Bold.woff": "/static/media/Vazir-Bold.7344d486ecbb56a9b3e5.woff",
+    "static/media/Vazir-Black.woff": "/static/media/Vazir-Black.ebc09d026eccef0942dd.woff",
+    "static/media/Vazir-Thin.woff": "/static/media/Vazir-Thin.84664efe6fd832ea3096.woff",
+    "static/media/Vazir-Regular.woff": "/static/media/Vazir-Regular.806537dbf5ba4d9ab402.woff",
+    "static/media/Vazir-Variable.woff": "/static/media/Vazir-Variable.1b758e8a3f9e86fbf491.woff",
+    "static/media/Vazir-Light.woff2": "/static/media/Vazir-Light.acb6acb54afc6a9a4423.woff2",
+    "static/media/Vazir-Bold.woff2": "/static/media/Vazir-Bold.0135812b3d7792a1ec26.woff2",
+    "static/media/Vazir-Black.woff2": "/static/media/Vazir-Black.185841df3f307c121958.woff2",
+    "static/media/Vazir-Thin.woff2": "/static/media/Vazir-Thin.84fabf66ff703ce087e8.woff2",
+    "static/media/Vazir-Regular.woff2": "/static/media/Vazir-Regular.a360dc26407972d3cb7d.woff2",
+    "static/media/Vazir-Variable.woff2": "/static/media/Vazir-Variable.93d6d07ed8e47dc95008.woff2",
+    "index.html": "/index.html",
+    "main.7079fdc6.css.map": "/static/css/main.7079fdc6.css.map",
+    "main.fe5b27a2.js.map": "/static/js/main.fe5b27a2.js.map",
+    "787.b6dd783b.chunk.js.map": "/static/js/787.b6dd783b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13fc8ec7.css",
-    "static/js/main.e64ee4b5.js"
+    "static/css/main.7079fdc6.css",
+    "static/js/main.fe5b27a2.js"
   ]
 }
