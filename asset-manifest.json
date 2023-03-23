@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.13fc8ec7.css",
-    "main.js": "/static/js/main.6ac24e45.js",
-    "static/js/787.b6dd783b.chunk.js": "/static/js/787.b6dd783b.chunk.js",
-    "index.html": "/index.html",
-    "main.13fc8ec7.css.map": "/static/css/main.13fc8ec7.css.map",
-    "main.6ac24e45.js.map": "/static/js/main.6ac24e45.js.map",
-    "787.b6dd783b.chunk.js.map": "/static/js/787.b6dd783b.chunk.js.map"
+    "main.css": "/DnsChanger.github.io/static/css/main.13fc8ec7.css",
+    "main.js": "/DnsChanger.github.io/static/js/main.e64ee4b5.js",
+    "static/js/787.b6dd783b.chunk.js": "/DnsChanger.github.io/static/js/787.b6dd783b.chunk.js",
+    "index.html": "/DnsChanger.github.io/index.html",
+    "main.13fc8ec7.css.map": "/DnsChanger.github.io/static/css/main.13fc8ec7.css.map",
+    "main.e64ee4b5.js.map": "/DnsChanger.github.io/static/js/main.e64ee4b5.js.map",
+    "787.b6dd783b.chunk.js.map": "/DnsChanger.github.io/static/js/787.b6dd783b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.13fc8ec7.css",
-    "static/js/main.6ac24e45.js"
+    "static/js/main.e64ee4b5.js"
   ]
 }
