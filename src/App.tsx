@@ -40,7 +40,7 @@ function App() {
           </div>
           <div className="mt-10 flex flex-col items-center gap-10">
             <div>
-              <a href="https://github.com/DnsChanger/dnsChanger-desktop/releases/tag/v1.3.0" target="_blank" className="bg-blue-500  hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg">نصب dnsChanger-desktop</a>
+              <a href="https://github.com/DnsChanger/dnsChanger-desktop/releases/latest" target="_blank" className="bg-blue-500  hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg">نصب dnsChanger-desktop</a>
             </div>
             <div >
               <span className="text-gray-500">  بعد از نصب ⭐ فراموش نشه :)</span>
