@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.84d48fc3.css",
-    "main.js": "/static/js/main.80044088.js",
+    "main.js": "/static/js/main.52765a1c.js",
     "static/js/787.b6dd783b.chunk.js": "/static/js/787.b6dd783b.chunk.js",
     "static/media/Vazir-Light.eot": "/static/media/Vazir-Light.dd27df7f828b4a65cede.eot",
     "static/media/Vazir-Light.ttf": "/static/media/Vazir-Light.cbb41bbc80aabe4a8be5.ttf",
@@ -27,11 +27,11 @@
     "static/media/Vazir-Variable.woff2": "/static/media/Vazir-Variable.93d6d07ed8e47dc95008.woff2",
     "index.html": "/index.html",
     "main.84d48fc3.css.map": "/static/css/main.84d48fc3.css.map",
-    "main.80044088.js.map": "/static/js/main.80044088.js.map",
+    "main.52765a1c.js.map": "/static/js/main.52765a1c.js.map",
     "787.b6dd783b.chunk.js.map": "/static/js/787.b6dd783b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84d48fc3.css",
-    "static/js/main.80044088.js"
+    "static/js/main.52765a1c.js"
   ]
 }
