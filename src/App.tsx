@@ -1,10 +1,25 @@
 import { SiGithub, SiDiscord } from "react-icons/si"
+import { AiFillApple, AiFillWindows } from "react-icons/ai"
+import { RiUbuntuFill } from "react-icons/ri"
 import { HomePageImages } from "./constant/imgsUrl";
 import { features } from "./constant/features";
 import { Feature } from "./interfaces/feature.interface";
+import { Octokit } from "octokit";
+import { useEffect, useState } from "react";
+import { User } from './interfaces/user.interface';
+import { Avatar, Button } from "@material-tailwind/react"
 
+const OWNER = "DnsChanger"
+const REPO_NAME = "dnsChanger-desktop"
 
 function App() {
+
+  const [contributors, setContributors] = useState<Array<User>>([])
+  useEffect(() => {
+
+    getContributors().then(data => setContributors(data))
+
+  }, [])
   return (
     <div className="flex flex-col h-screen">
       <nav className="bg-gray-900">
@@ -23,30 +38,22 @@ function App() {
       <header className="py-16">
 
         <div className="mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center text-gray-900 mb-8">dnsChanger-desktop</h1>
-          <p className="text-2xl text-center text-gray-700 mb-8">با dnsChanger-desktop می‌توانید DNS رایانه شخصی خود را تغییر داده و از سایت‌های تحریم شده از داخل کشور بازدید کنید.</p>
+        </div>
+        <div className="md:flex md:flex-row md:px-60">
+          <div className="flex-1">
+            <h1 className="text-6xl font-bold text-center text-gray-900 mb-8">
+              DNS Changer
+            </h1>
+            <DetailsComponent />
+          </div>
+          <div >
+            <div className="hidden md:block xl:block sm:block">
+              <img src="https://user-images.githubusercontent.com/66132114/236648741-24f511f7-f603-490e-a7cb-a12b074e5985.gif"></img>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-10">
-          <div className="flex items-center">
-            <div className="flex flex-grow justify-center gap-1" dir="ltr">
-              <div>
-                <img src="https://img.shields.io/github/downloads/DnsChanger/dnsChanger-desktop/total.svg" />
-              </div>
-              <div>
-                <img src="https://img.shields.io/github/stars/dnsChanger/dnsChanger-desktop" />
-              </div>
-            </div>
-          </div>
-          <div className="mt-10 flex flex-col items-center gap-10">
-            <div>
-              <a href="https://github.com/DnsChanger/dnsChanger-desktop/releases/latest" target="_blank" className="bg-blue-500  hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg">نصب dnsChanger-desktop</a>
-            </div>
-            <div >
-              <span className="text-gray-500">  بعد از نصب ⭐ فراموش نشه :)</span>
-            </div>
-          </div>
-        </div>
+
 
       </header>
 
@@ -95,6 +102,23 @@ function App() {
         </div>
       </section>
 
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto">
+          <div className="mb-8 flex flex-col gap-3">
+            <h2 className="text-3xl font-bold text-center">مشارکت کنندگان</h2>
+            <p className="text-center">لیست کسایی که به توسعه این ابزار کمک میکنند. شما هم میتونید جزئی از این لیست باشید </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
+            {
+              contributors.map((user: User, index: number) => {
+                return (
+                  <ContributorComponent user={user} />
+                )
+              })
+            }
+          </div>
+        </div>
+      </section>
 
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4">
@@ -117,3 +141,101 @@ function App() {
 // Developed By ChatGpt 🤖❤️
 
 export default App;
+
+
+function DetailsComponent() {
+  return (
+    <div>
+      <p className="text-2xl text-center text-gray-700 mb-8"
+
+
+      >
+        یک نرم افزار متن باز است که با استفاده از آن، کاربران می‌توانند با سادگی تنظیمات DNS خود را تغییر دهند و به این ترتیب، از دسترسی به اینترنت با سرعت و کارایی بالاتری برخوردار شوند.
+
+
+      </p>
+      <div className="mt-10">
+        <div className="flex items-center">
+          <div className="flex flex-grow justify-center gap-1" dir="ltr">
+            <div>
+              <img src="https://img.shields.io/github/downloads/DnsChanger/dnsChanger-desktop/total.svg" />
+            </div>
+            <div>
+              <img src="https://img.shields.io/github/stars/dnsChanger/dnsChanger-desktop" />
+            </div>
+          </div>
+        </div>
+        <div className="mt-10 flex flex-col items-center gap-10">
+          <div className="flex flex-row gap-2">
+            <a href="https://github.com/DnsChanger/dnsChanger-desktop/releases/latest"
+              target="_blank">
+              <Button className="flex flex-row gap-2">
+                <AiFillWindows />
+                دانلود نسخه ویندوز
+              </Button>
+            </a>
+            <a href="https://github.com/DnsChanger/dnsChanger-desktop/releases/latest">
+              <Button className="flex flex-row gap-2">
+                <RiUbuntuFill />
+                دانلود نسخه لینوکس
+              </Button>
+            </a>
+
+            <Button className="flex flex-row gap-2" color="gray" disabled>
+              <AiFillApple />
+              دانلود نسخه مک (به زودی)
+            </Button>
+          </div>
+          <div>
+          </div>
+          <div>
+            <span className="text-gray-500">  بعد از نصب ⭐ فراموش نشه :)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+interface Prop {
+  user: User
+}
+function ContributorComponent(prop: Prop) {
+  const { user } = prop
+  return (
+    <a href={user.html_url}>
+
+      <div className="max-w-sm rounded-3xl overflow-hidden text-center shadow-lg hover:border-b-2 hover:border-b-teal-700">
+        <Avatar src={user.avatar_url} alt={`${user.login}'s avatar`} size="xxl" />
+        <div className="px-6 py-4  item">
+          <div className=" text-xl mb-2 font-thin">{user.login}</div>
+          <div className="flex flex-row items-center justify-center">
+            <div className="cursor-pointer">
+              <a href={user.html_url} target="_blank">
+                <SiGithub />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  )
+}
+
+
+async function getContributors() {
+
+  const octokit = new Octokit({
+  })
+
+  const data = await octokit.request(`GET /repos/${OWNER}/${REPO_NAME}/contributors`, {
+    owner: 'OWNER',
+    repo: 'REPO_NAME',
+    headers: {
+      'X-GitHub-Api-Version': '2022-11-28'
+    }
+  })
+  console.log(data)
+  return data.data || []
+}
