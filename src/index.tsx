@@ -1,6 +1,6 @@
 import "./styles/global.css";
 import { createRoot } from "react-dom/client";
-import App from "./components/App/App";
+import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
 
 const app = document.getElementById("app") as HTMLElement;
