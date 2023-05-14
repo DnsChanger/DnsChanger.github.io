@@ -10,7 +10,7 @@ export default function Features() {
         </h2>
         <div className="grid grid-cols-3 gap-5">
           {features.map((feature: Feature) => (
-            <div className="max-w-sm p-6 rounded border border-gray-200 transition-all select-none hover:shadow-xl bg-white flex items-center">
+            <div className="max-w-sm p-6 rounded-md border border-gray-200 transition-all select-none hover:shadow-xl bg-white flex items-center">
               <feature.icon className="text-gray-600 text-2xl" />
               <div className="flex-1 p-4">
                 <div className="font-bold text-xl mb-2">{feature.title}</div>
