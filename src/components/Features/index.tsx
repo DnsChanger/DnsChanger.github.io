@@ -8,7 +8,7 @@ export default function Features() {
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
           ویژگی‌های DnsChanger Desktop
         </h2>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-5">
           {features.map((feature: Feature) => (
             <div className="max-w-sm p-6 rounded-md border border-gray-200 transition-all select-none hover:shadow-xl bg-white flex items-center">
               <feature.icon className="text-gray-600 text-2xl" />
