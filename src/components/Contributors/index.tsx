@@ -27,7 +27,7 @@ export default function Contributors() {
             <a
               target="_blank"
               href={user.html_url}
-              className="max-w-sm cursor-pointer rounded-md overflow-hidden select-none text-center border border-gray-300 p-8 transition-all hover:bg-white hover:shadow-xl"
+              className="max-w-sm cursor-pointer rounded-3xl overflow-hidden select-none text-center border border-gray-300 p-8 transition-all hover:bg-white hover:shadow-xl"
             >
               <img
                 src={user.avatar_url}

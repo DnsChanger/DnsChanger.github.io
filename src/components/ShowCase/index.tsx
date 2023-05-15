@@ -77,7 +77,7 @@ export default function ShowCase() {
             <img
               width="100%"
               alt="DNS Changer"
-              src="https://user-images.githubusercontent.com/66132114/236648741-24f511f7-f603-490e-a7cb-a12b074e5985.gif"
+              src="https://github.com/DnsChanger/.github/assets/66132114/b32b4a67-cd5a-4206-b8d4-ef4f37d8cf6f"
             />
           </div>
         </div>

@@ -6,7 +6,7 @@ export default function Features() {
     <section className="bg-gray-100 py-20">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          ویژگی‌های DnsChanger Desktop
+          ویژگی‌های DNS Changer-Desktop
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-5">
           {features.map((feature: Feature) => (
