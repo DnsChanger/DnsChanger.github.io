@@ -1,5 +1,11 @@
 # Astro Starter Kit: Basics
 
+- you need a ``.env`` file like this for your github token
+
+```env
+GITHUB_TOKEN=your_token_here
+```
+
 ```
 npm create astro@latest -- --template basics
 ```
