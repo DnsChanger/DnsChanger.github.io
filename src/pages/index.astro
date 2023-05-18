@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import dns_banner from "../../images/dnsc-banner.png";
+import preview_img from "../../images/image.png";
+import Features from "../components/Features.astro";
+import { features_list } from "../constant/features";
+import Contributors from "../components/Contributors.astro";
+---
+
+<Layout title="DNS Changer">
+  <main>
+    <div class="main_row">
+      <div class="main_claumn">
+        <h1>DNS Changer فارسی و اوپن سورس</h1>
+        <p class="dsc">
+          یک DNS Changer فارسی و اوپن سورس برای سیستم عامل های ویندوز ، مک و
+          لینوکس که هدفش جمع آوری بهترین DNS ها در یک اپلیکیشن امن هستش
+        </p>
+        <div class="download_btns_row">
+          <a class="download_btn win" href="https://github.com/DnsChanger/dnsChanger-desktop/releases" target="_blank">
+            دانلود نرم افزار برای ویندوز
+          </a>
+          <a class="download_btn linux" href="https://github.com/DnsChanger/dnsChanger-desktop/releases" target="_blank"
+            >دانلود نرم افزار برای لینوکس</a
+          >
+        </div>
+      </div>
+      <img class="preview_img" src={preview_img} alt="DNS changer banner" />
+    </div>
+    <Features list={features_list} />
+    <h3>افرادی که در این پروژه مشارکت داشتن</h3>
+    <Contributors />
+  </main>
+</Layout>
+
+<style>
+  .main_row {
+    @apply p-[15px] m-[20px] rounded-[40px];
+    /* desktop */
+    @apply lg:flex lg:items-center lg:justify-center gap-[20px] lg:pr-[20px] lg:pl-[20px] lg:pt-[50px] lg:mt-[30px] lg:mr-[25px] lg:ml-[25px] lg:rounded-[40px] lg:pb-[30px];
+    background: rgb(105, 82, 244);
+    background: linear-gradient(
+      300deg,
+      rgba(105, 82, 244, 1) 0%,
+      rgba(5, 17, 41, 1) 35%,
+      rgba(29, 47, 115, 1) 72%,
+      rgba(87, 102, 199, 1) 100%
+    );
+  }
+
+  h1 {
+    @apply text-center text-[22px] font-bold text-white pt-[20px] pb-[20px];
+    font-size: 25px !important;
+    font-weight: 900 !important;
+  }
+
+  .dsc {
+    @apply text-justify text-[15px] text-purple-100 p-[15px];
+    /* desktop */
+    @apply lg:max-w-[520px] lg:mr-auto lg:ml-auto;
+  }
+
+  .download_btns_row {
+    @apply flex items-center flex-col gap-2 mb-5;
+    /* desktop */
+    @apply lg:flex-row lg:justify-center;
+  }
+
+  .preview_img {
+    @apply text-center pr-8 pl-8 mb-5;
+    /* desktop */
+    @apply lg:pr-[unset] lg:pl-[unset] lg:rounded-[20px];
+  }
+
+  .download_btn {
+    @apply text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    background: #5c5cff1f;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-bottom: 25px !important;
+    border-radius: 20px;
+    border: 1px #0000009e solid;
+    max-width: fit-content;
+    padding: 20px 25px;
+  }
+
+</style>

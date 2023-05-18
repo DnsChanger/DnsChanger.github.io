@@ -1,0 +1,62 @@
+---
+// get GITHUB_TOKEN value from .env file in project
+const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN;
+
+const response = await fetch('https://api.github.com/repos/DnsChanger/dnsChanger-desktop/contributors', {
+    headers: {
+        'Authorization': `Bearer ${GITHUB_TOKEN}`
+    }
+});
+
+const data = await response.json();
+const randomUser = data[0];
+console.log(data);
+---
+
+
+
+<div class="ctb_row">
+    {Array.isArray(data) && data.map((user: any) => (
+      <div class="each_contributor_box">
+        <img src={user.avatar_url} alt={user.login} />
+        <a href={user.html_url} target="_blank">{user.login}</a>
+      </div>
+    ))}
+  </div>
+
+
+<style>
+  .ctb_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 85px;
+}
+
+.each_contributor_box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 15px;
+    background: #415a94;
+    border-radius: 25px;
+    align-items: center;
+    box-shadow: 0px 5px 15px 6px rgb(0 0 0 / 30%);
+}
+
+.each_contributor_box img {
+    max-width: 250px;
+    border-radius: 25px;
+    border: 2px #373737 solid;
+}
+
+.each_contributor_box a {
+    border: 1px #00000052 solid;
+    padding: 6px 15px 4px 15px;
+    border-radius: 5px;
+    background: #3333331a;
+    color: #fff;
+    margin-bottom: 5px;
+}
+</style>

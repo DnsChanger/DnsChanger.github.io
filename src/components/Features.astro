@@ -1,0 +1,84 @@
+---
+const { list } = Astro.props;
+import type { Feature } from "../interface/feature.interface";
+---
+
+<div class="features_row">
+  {
+    list.map((item: Feature) => (
+      <div class="each_feature_card">
+        <item.icon class:list="feature_icon" />
+
+        <div class="title_and_description">
+          <div class="feature_title">{item.title}</div>
+          <div class="feature_description">{item.description}</div>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .features_row {
+    @apply flex items-center justify-center flex-wrap gap-[40px] p-[15px] m-[20px] rounded-[40px];
+    background: linear-gradient(0deg, rgba(25, 25, 88, 1), rgba(0, 0, 0, 0)),
+      radial-gradient(
+        circle at 40% 50%,
+        rgba(36, 83, 115, 1),
+        rgba(0, 255, 0, 0)
+      ),
+      radial-gradient(
+        circle at -1% 100%,
+        rgba(109, 21, 195, 1),
+        rgba(0, 255, 255, 0)
+      ),
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(216, 182, 255, 1),
+        rgba(255, 255, 0, 0)
+      );
+    /*background-blend-mode: difference;*/
+    padding: 50px 0px;
+    border-radius: 30px;
+    margin-bottom: 90px;
+  }
+
+  .feature_icon {
+    @apply max-w-[45px];
+    background: rgba(229, 227, 227, 0.75);
+    border-radius: 10px;
+    padding: 9px;
+    max-height: 45px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px rgba(246, 245, 245, 0.81) solid;
+  }
+
+  .each_feature_card {
+    @apply flex gap-[25px] p-4 rounded-[10px] bg-[#ffffff4f];
+    /*    a perfect dark drop shadow*/
+    box-shadow: 0px 5px 15px 5px rgb(0 0 0 / 9%);
+  }
+  .feature_title {
+    @apply text-[#ffffff] text-[18px] font-bold;
+  }
+  .title_and_description {
+    @apply flex flex-col gap-[5px];
+  }
+
+  .feature_description {
+    @apply text-[#ffffff] text-[14px] max-w-[400px] text-justify pl-[50px];
+    letter-spacing: -0.04em;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    .each_feature_card {
+      margin-right: 15px;
+      margin: 15px;
+    }
+
+    .feature_description {
+        padding-left: 10px;
+    }
+  }
+</style>
