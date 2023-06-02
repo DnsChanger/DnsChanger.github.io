@@ -14,6 +14,7 @@ export default function ShowCase() {
               یک نرم افزار متن باز است که با استفاده از آن، کاربران می‌توانند با
               سادگی تنظیمات DNS خود را تغییر دهند و به این ترتیب، از دسترسی به
               اینترنت با سرعت و کارایی بالاتری برخوردار شوند.
+
             </p>
             <div className="mt-10">
               <div className="mt-10 flex flex-col items-center divide-y-2">
@@ -41,13 +42,11 @@ export default function ShowCase() {
                     </span>
                   </a>
                   <button
-                    disabled
-                    className="flex-1 flex items-center bg-gray-200 text-gray-600 rounded-md px-4 py-2 shadow-sm transition-all select-none cursor-not-allowed"
+                    className="flex-1 flex items-center bg-blue-500 text-white rounded-md px-4 py-2 shadow-sm transition-all select-none  hover:bg-blue-600"
                   >
                     <AiFillApple />
                     <span className="flex-1 text-sm leading-5 text-center">
                       دانلود نسخه مک <br />
-                      (به زودی)
                     </span>
                   </button>
                 </div>
@@ -77,7 +76,7 @@ export default function ShowCase() {
             <img
               width="100%"
               alt="DNS Changer"
-              src="https://github.com/DnsChanger/.github/assets/66132114/b32b4a67-cd5a-4206-b8d4-ef4f37d8cf6f"
+              src="https://github.com/DnsChanger/dnsChanger-desktop/raw/main/.github/1.png?raw=true"
             />
           </div>
         </div>

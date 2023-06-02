@@ -1,4 +1,4 @@
-import { Octokit } from "octokit";
+import axios from "axios"
 import { useEffect, useState } from "react";
 import { SiGithub } from "react-icons/si";
 
@@ -50,19 +50,13 @@ export default function Contributors() {
   );
 }
 
-async function getContributors() {
-  const octokit = new Octokit({});
-
-  const { data } = await octokit.request(
-    `GET /repos/${OWNER}/${REPO_NAME}/contributors`,
-    {
-      owner: "OWNER",
-      repo: "REPO_NAME",
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    }
-  );
-
-  return data || [];
+async function getContributors(): Promise<User[]> {
+  try {
+    const response = await axios.get(`https://api.github.com/repos/${OWNER}/${REPO_NAME}/contributors`);
+    const data = response.data;
+    return data
+  } catch (error) {
+    console.error(error);
+    return []
+  }
 }

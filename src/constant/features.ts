@@ -13,18 +13,18 @@ export const features: Array<Feature> = [
     title: "تغییر آسان DNS رایانه شخصی",
     icon: MdPublishedWithChanges,
     description:
-      "با dnsChanger-desktop به سادگی می‌توانید DNS رایانه خود را تغییر دهید.",
+      "به سادگی می‌توانید DNS سیستم عامل خود را تغییر دهید.",
   },
   {
     title: "پشتیبانی از DNS مختلف",
     icon: MdOutlineDns,
-    description: "dnsChanger-desktop از بیش از ۳۰۰۰ DNS مختلف پشتیبانی می‌کند.",
+    description: "  بیش از ۳۰۰۰ DNS مختلف پشتیبانی می‌کند.",
   },
   {
     title: "بدون محدودیت سرعت",
     icon: MdRocketLaunch,
     description:
-      "dnsChanger-desktop هیچگونه محدودیتی در سرعت اینترنت شما ایجاد نمی‌کند.",
+      "هیچگونه محدودیتی در سرعت اینترنت شما ایجاد نمی‌کند.",
   },
   {
     title: "دسته بندی",
