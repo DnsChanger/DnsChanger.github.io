@@ -1,6 +1,7 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons';
 
-export interface Feature {
+export interface Feature
+{
   title: string;
   icon: IconType;
   description: string;
