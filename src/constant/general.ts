@@ -1,2 +1,2 @@
-export const OWNER = 'DnsChanger';
-export const REPO_NAME = 'dnsChanger-desktop';
+export const OWNER = "DnsChanger";
+export const REPO_NAME = "dnsChanger-desktop";

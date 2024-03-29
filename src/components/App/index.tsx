@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import Footer from '../Footer';
-import NavBar from '../NavBar';
-import ShowCase from '../ShowCase';
-import Features from '../Features';
-import Contributors from '../Contributors';
+import Footer from "../Footer";
+import NavBar from "../NavBar";
+import ShowCase from "../ShowCase";
+import Features from "../Features";
+import Contributors from "../Contributors";
 
-export default function App() 
-{
+export default function App() {
   return (
-    <div className='flex flex-col h-screen'>
+    <div className="flex flex-col h-screen">
       <NavBar />
       <ShowCase />
       <Features />

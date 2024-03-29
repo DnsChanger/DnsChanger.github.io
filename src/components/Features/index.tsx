@@ -9,8 +9,11 @@ export default function Features() {
           ویژگی‌های DNS Changer
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-5">
-          {features.map((feature: Feature) => (
-            <div className="max-w-sm p-6 rounded-md border border-gray-200 transition-all select-none hover:shadow-xl bg-white flex items-center">
+          {features.map((feature: Feature, index: number) => (
+            <div
+              key={index}
+              className="max-w-sm p-6 rounded-md border border-gray-200 transition-all select-none hover:shadow-xl bg-white flex items-center"
+            >
               <feature.icon className="text-gray-600 text-2xl" />
               <div className="flex-1 p-4">
                 <div className="font-bold text-xl mb-2">{feature.title}</div>
