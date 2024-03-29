@@ -86,11 +86,7 @@ export default function ShowCase() {
         </div>
         <div className="flex-3">
           <div className="hidden md:block xl:block sm:block">
-            <img
-              width="100%"
-              alt="DNS Changer"
-              src="https://github.com/DnsChanger/dnsChanger-desktop/raw/main/.github/1.png?raw=true"
-            />
+            <img width="100%" alt="DNS Changer" src="app.png" />
           </div>
         </div>
       </div>
