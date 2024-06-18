@@ -1,66 +1,9 @@
 {
-  "name": "dnschanger-webpage",
-  "version": "0.1.0",
-  "private": false,
-  "homepage": "/",
-  "prettier": {
-    "arrowParens": "avoid",
-    "jsxSingleQuote": false,
-    "semi": true,
-    "singleQuote": false,
-    "tabWidth": 2,
-    "useTabs": false
+  "devDependencies": {
+    "daisyui": "^4.12.2",
+    "tailwindcss": "^3.4.4"
   },
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "deploy": "vite build && gh-pages -d dist",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "dependencies": {
-    "@heroicons/react": "^2.0.17",
-    "@material-tailwind/react": "^2.0.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.18",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "axios": "^1.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.0",
-    "autoprefixer": "^10.4.14",
-    "gh-pages": "^5.0.0",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
-    "vite": "^4.3.9"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "tailwind": "npx tailwindcss -i ./dist/input.css -o ./dist/output.css --watch"
   }
 }
