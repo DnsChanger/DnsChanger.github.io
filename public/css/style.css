@@ -1,0 +1,59 @@
+/* Font faces */
+@font-face {
+    font-family: Kalameh-Bold;
+    src: url("../fonts/Kalameh-Bold.ttf");
+}
+
+@font-face {
+    font-family: Kalameh-Regular;
+    src: url("../fonts/Kalameh-Regular.ttf");
+}
+
+@font-face {
+    font-family: Kalameh-Medium;
+    src: url("../fonts/Kalameh-Medium.ttf");
+}
+
+@font-face {
+    font-family: Kalameh-Black;
+    src: url("../fonts/Kalameh-Black.ttf");
+}
+
+@font-face {
+    font-family: Kalameh-Thin;
+    src: url("../fonts/Kalameh-Thin.ttf");
+}
+
+@font-face {
+    font-family: Kalameh-Light;
+    src: url("../fonts/Kalameh-Light.ttf");
+}
+
+@font-face {
+    font-family: Kalameh-ExtraLight;
+    src: url("../fonts/Kalameh-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: peyda-bold;
+    src: url("../fonts/PEYDA-BOLD.TTF");
+}
+
+@font-face {
+    font-family: peyda-medium;
+    src: url("../fonts/PEYDA-MEDIUM.TTF");
+}
+
+@font-face {
+    font-family: peyda-regular;
+    src: url("../fonts/PEYDA-REGULAR.TTF");
+}
+
+@font-face {
+    font-family: peyda-thin;
+    src: url("../fonts/PEYDA-THIN.TTF");
+}
+
+.div-path {
+    clip-path: polygon(52% 48%, 100% 0, 100% 100%, 0 100%);
+}
