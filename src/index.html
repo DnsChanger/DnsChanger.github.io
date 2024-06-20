@@ -34,33 +34,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body dir="rtl" class="bg-white text-[#262626]">
+<body dir="auto" class="bg-white text-[#262626] font-[peyda]">
     <div class="mx-auto w-full max-w-[1200px] xl:p-0 px-5">
         <header class="flex items-center justify-between py-5">
-            <div>
-                <a href="#" class="btn btn-info bg-[#1C77FF] hover:bg-[#4198fb]"><i
+            <div class="flex gap-1 flex-wrap">
+                <a href="#" class="btn btn-info bg-[#1C77FF] hover:bg-[#4198fb] min-w-[51px]"><i
                         class="fa-brands fa-github text-white"></i></a>
-                <a href="#" class="btn btn-info bg-[#1C77FF] hover:bg-[#4198fb]"><i
+                <a href="#" class="btn btn-info bg-[#1C77FF] hover:bg-[#4198fb] min-w-[51px]"><i
                         class="fa-brands fa-discord text-white"></i></a>
             </div>
-            <nav class="font-[peyda] font-bold text-lg md:inline-block hidden">
+            <nav class="font-semibold text-lg md:inline-block hidden">
                 <ul class="flex gap-14">
-                    <li><a class="transition delay-150 duration-500 hover:border-b-[2px] border-[#1C77FF] py-2"
+                    <li><a id="homeNav"
+                            class="transition duration-300 border-b-[2px] border-transparent hover:border-[#1C77FF] py-2"
                             href="#home">خانه</a></li>
-                    <li><a class="transition delay-150 duration-500 hover:border-b-[2px] border-[#1C77FF] py-2"
+                    <li><a id="featureNav"
+                            class="transition duration-300 border-b-[2px] border-transparent hover:border-[#1C77FF] py-2"
                             href="#features">ویژگی ها</a></li>
-                    <li><a class="transition delay-150 duration-500 hover:border-b-[2px] border-[#1C77FF] py-2"
-                            href="#team">مشارکت کنندگان</a></li>
-                    <li><a class="transition delay-150 duration-500 hover:border-b-[2px] border-[#1C77FF] py-2"
+                    <li><a id="contributorsNav"
+                            class="transition duration-300 border-b-[2px] border-transparent hover:border-[#1C77FF] py-2"
+                            href="#contributors">مشارکت کنندگان</a></li>
+                    <li><a id="questionsNav"
+                            class="transition duration-300 border-b-[2px] border-transparent hover:border-[#1C77FF] py-2"
                             href="#qa">سوالات پر تکرار</a></li>
                 </ul>
             </nav>
-            <button
-                class="transition duration-300 font-[peyda] py-3 px-9 rounded-md text-white font-normal bg-[#1C77FF] active:scale-95 hover:bg-[#4198fb]">
-                انگلیسی
+            <button id="languageButton"
+                class="group flex flex-row-reverse gap-3 items-center transition duration-300 py-3 px-6 rounded-md text-white font-normal bg-[#1C77FF] active:scale-95 hover:bg-[#4198fb]">
+                <img id="languageSelectIcon"
+                    class="size-6 bg-[#1C77FF] transition duration-300 group-hover:bg-[#4198fb]"
+                    src="../public/assets/images/united-states-flag-icon.svg" />
+                <span class="font-[Rubik-Regular]" id="languageSelectText">English</span>
             </button>
         </header>
         <main class="py-10">
@@ -68,72 +74,91 @@
             <section id="home" class="flex lg:gap-14 gap-6 lg:flex-row flex-col-reverse">
                 <div class="basis-[50%]">
                     <h1 class="font-black text-5xl text-center">DNS Changer</h1>
-                    <div class="flex flex-col font-[peyda] mt-10">
-                        <p class="text-[#4E4E4E] text-xl text-justify">یک نرم افزار متن باز است که با استفاده از آن،
+                    <div class="flex flex-col mt-10">
+                        <p id="appDescription" class="text-[#4E4E4E] text-xl text-justify">یک نرم افزار متن باز است که
+                            با استفاده از آن،
                             کاربران
-                            می‌توانند با سادگی تنظیمات DNS خود را تغییر دهند و به این ترتیب،
+                            می‌توانند به سادگی تنظیمات DNS خود را تغییر دهند و به این ترتیب،
                             از دسترسی به اینترنت با سرعت و کارایی بالاتری برخوردار شوند.</p>
                         <div class="flex flex-col mt-8 gap-5">
-                            <p class="font-medium">دنلود برای سیستم عامل های مختلف:</p>
+                            <p id="downloadPlatformTitle" class="font-medium">دانلود برای سیستم عامل های مختلف:</p>
                             <div class="grid sm:grid-cols-4 grid-cols-2 gap-4">
                                 <a href="#"
                                     class="transition-all duration-500 hover:bg-[#FFF7FC] hover:-translate-y-1 max-h-[60px] border-white hover:border-[#808080] border-b-[1px] py-3 px-3 flex gap-5 justify-center items-center">
                                     <i class="fa-brands fa-windows text-2xl"></i>
-                                    <p class="text-base">ویندوز</p>
+                                    <p id="windowsPlatform" class="text-base">ویندوز</p>
                                 </a>
                                 <a href="#"
                                     class="transition duration-500 hover:bg-[#FFF7FC] hover:-translate-y-1 max-h-[60px] border-white hover:border-[#808080] border-b-[1px] py-3 px-3 flex gap-5 justify-center items-center">
                                     <i class="fa-brands fa-linux text-2xl"></i>
-                                    <p class="text-base">لینوکس</p>
+                                    <p id="linuxPlatform" class="text-base">لینوکس</p>
                                 </a>
                                 <a href="#"
                                     class="transition duration-500 hover:bg-[#FFF7FC] hover:-translate-y-1 max-h-[60px] border-white hover:border-[#808080] border-b-[1px] py-3 px-3 flex gap-5 justify-center items-center">
                                     <i class="fa-brands fa-apple text-2xl"></i>
-                                    <p class="text-base">مک</p>
+                                    <p id="macPlatform" class="text-base">مک</p>
                                 </a>
                                 <a href="#"
                                     class="transition duration-500 hover:bg-[#FFF7FC] hover:-translate-y-1 max-h-[60px] border-white hover:border-[#808080] border-b-[1px] py-3 px-3 flex gap-5 justify-center items-center">
                                     <i class="fa-solid fa-terminal text-2xl"></i>
-                                    <p class="text-base">تحت فرمان</p>
+                                    <p id="cmdPlatform" class="text-base">تحت فرمان</p>
                                 </a>
                             </div>
                             <div class="flex justify-center text-[#7D7D7D] mt-2">
-                                <p>بعد از نصب ⭐ فراموش نشه</p>
+                                <p id="dontForgotStar">بعد از نصب ⭐ فراموش نشه</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="flex basis-[50%] lg:justify-end justify-center">
-                    <img id="previewPicture"
-                        class="swiper-slide max-h-[320px] max-w-[570px] transition-all duration-500"
-                        src="../public/assets/images/app.png" alt="App Preview">
+                    <div class="overflow-hidden relative w-full h-full max-h-[320px] max-w-[570px] group shadow-lg">
+                        <div class="absolute transition duration-100 z-50 top-0 right-0 size-64 bg-[#1C77FF] rounded-md group-hover:left-0 group-hover:right-auto group-hover:-rotate-90"
+                            style="clip-path: polygon(0 0, 100% 0, 100% 70%, 100% 100%, 100% 100%, 98% 2%, 0 0);"></div>
+                        <div class="absolute transition duration-100 rotate-180 z-50 bottom-0 left-0 size-64 bg-[#1C77FF] rounded-md group-hover:right-0 group-hover:left-auto group-hover:rotate-90"
+                            style="clip-path: polygon(0 0, 100% 0, 100% 70%, 100% 100%, 100% 100%, 98% 2%, 0 0);"></div>
+                        <img id="previewPicture"
+                            class="absolute w-full h-full max-h-[320px] max-w-[570px] transition-all duration-1000 ease-in-out rounded-xl"
+                            src="../public/assets/images/Preview/1.png" alt="App Preview">
+                        <img id="previewPicture"
+                            class="absolute opacity-0 w-full h-full max-h-[320px] max-w-[570px] transition-all duration-1000 ease-in-out rounded-xl"
+                            src="../public/assets/images/Preview/2.png" alt="App Preview">
+                        <img id="previewPicture"
+                            class="absolute opacity-0 w-full h-full max-h-[320px] max-w-[570px] transition-all duration-1000 ease-in-out rounded-xl"
+                            src="../public/assets/images/Preview/3.png" alt="App Preview">
+                        <img id="previewPicture"
+                            class="absolute opacity-0 w-full h-full max-h-[320px] max-w-[570px] transition-all duration-1000 ease-in-out rounded-xl"
+                            src="../public/assets/images/Preview/4.png" alt="App Preview">
+                        <img id="previewPicture"
+                            class="absolute opacity-0 w-full h-full max-h-[320px] max-w-[570px] transition-all duration-1000 ease-in-out rounded-xl"
+                            src="../public/assets/images/Preview/5.png" alt="App Preview">
+                    </div>
                 </div>
             </section>
             <!-- Popular DNS -->
             <div class="flex flex-col gap-12 mt-12">
-                <h4 class="text-2xl font-[peyda] text-center">پشتیبانی از سرویس های محبوب</h4>
-                <div class="grid md:grid-cols-4 md:gap-0 sm:grid-cols-2 gap-6  font-[peyda]">
+                <h4 id="titlePopularServices" class="text-2xl text-center">پشتیبانی از سرویس های محبوب</h4>
+                <div class="grid md:grid-cols-4 md:gap-0 sm:grid-cols-2 gap-6">
                     <div class="flex items-center">
-                        <p class="text-3xl text-center basis-[80%]">کلادفلر</p>
+                        <p id="cloudflareDNS" class="text-3xl text-center basis-[80%]">کلادفلر</p>
                         <img class="size-20 basis-[20%] rounded-md" src="../public/assets/images/cloudflare.png" alt="">
                     </div>
                     <div class="flex items-center">
-                        <p class="text-3xl text-center basis-[80%]">403 آنلاین</p>
+                        <p id="Online403DNS" class="text-3xl text-center basis-[80%]">403 آنلاین</p>
                         <img class="size-20 basis-[20%] rounded-md" src="../public/assets/images/403Online.jpg" alt="">
                     </div>
                     <div class="flex items-center">
-                        <p class="text-3xl text-center basis-[80%]">شکن</p>
+                        <p id="shecanDNS" class="text-3xl text-center basis-[80%]">شکن</p>
                         <img class="size-20 basis-[20%] rounded-md" src="../public/assets/images/shecan.png" alt="">
                     </div>
                     <div class="flex items-center">
-                        <p class="text-3xl text-center basis-[80%]">الکترو</p>
+                        <p id="electroDNS" class="text-3xl text-center basis-[80%]">الکترو</p>
                         <img class="size-20 basis-[20%] rounded-md" src="../public/assets/images/electro.jpg" alt="">
                     </div>
                 </div>
                 <!-- Features App -->
                 <section id="features" class="flex flex-col gap-12 pt-12">
-                    <h4 class="text-2xl font-[peyda] text-center">ویژگی های برنامه</h4>
-                    <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-5 font-[peyda]">
+                    <h4 id="titleFeatures" class="text-2xl text-center">ویژگی های برنامه</h4>
+                    <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-5">
                         <div
                             class="transition duration-300 cursor-pointer hover:shadow-md hover:-translate-y-1 p-5 rounded-md border-[#DDDDDD] border-[2px] flex flex-col gap-3">
                             <div class="rounded-full bg-[#EDEEEF] size-10 flex justify-center items-center">
@@ -146,8 +171,9 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h5 class="text-xl font-semibold">تغییر آسان DNS رایانه شخصی</h5>
-                            <p class="text-[#565656]">به سادگی و به سرعت می توانید DNS سیستم خود را تغییر دهید</p>
+                            <h5 id="featureTitleOne" class="text-xl font-semibold">تغییر آسان DNS رایانه شخصی</h5>
+                            <p id="featureDescriptionOne" class="text-[#565656]">به سادگی و به سرعت می توانید DNS سیستم
+                                خود را تغییر دهید</p>
                         </div>
                         <div
                             class="transition duration-300 cursor-pointer hover:shadow-md hover:-translate-y-1 p-5 rounded-md border-[#DDDDDD] border-[2px] flex flex-col gap-3">
@@ -161,8 +187,9 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h5 class="text-xl font-semibold">پشتیبانی از DNS ها ی مختلف</h5>
-                            <p class="text-[#565656]">بیشتر از 3000 DNS را به خوبی پشتیبانی میکند.</p>
+                            <h5 id="featureTitleTwo" class="text-xl font-semibold">پشتیبانی از DNS ها ی مختلف</h5>
+                            <p id="featureDescriptionTwo" class="text-[#565656]">بیشتر از 3000 DNS را به خوبی پشتیبانی
+                                میکند.</p>
                         </div>
                         <div
                             class="transition duration-300 cursor-pointer hover:shadow-md hover:-translate-y-1 p-5 rounded-md border-[#DDDDDD] border-[2px] flex flex-col gap-3">
@@ -176,8 +203,9 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h5 class="text-xl font-semibold">نگران هیچ محدودیتی نباشید</h5>
-                            <p class="text-[#565656]">در اینترنت شما هیچ محدودیتی ایجاد نخواهد شد.</p>
+                            <h5 id="featureTitleThree" class="text-xl font-semibold">نگران هیچ محدودیتی نباشید</h5>
+                            <p id="featureDescriptionThree" class="text-[#565656]">در اینترنت شما هیچ محدودیتی ایجاد
+                                نخواهد شد.</p>
                         </div>
                         <div
                             class="transition duration-300 cursor-pointer hover:shadow-md hover:-translate-y-1 p-5 rounded-md border-[#DDDDDD] border-[2px] flex flex-col gap-3">
@@ -191,8 +219,9 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h5 class="text-xl font-semibold">امکان دسته بندی</h5>
-                            <p class="text-[#565656]">با استفاده از دسته بندی میتوانید سرور مورد نیاز خود را به راحتی
+                            <h5 id="featureTitleFour" class="text-xl font-semibold">امکان دسته بندی</h5>
+                            <p id="featureDescriptionFour" class="text-[#565656]">با استفاده از دسته بندی میتوانید سرور
+                                مورد نیاز خود را به راحتی
                                 پیدا کنید.</p>
                         </div>
                         <div
@@ -210,8 +239,9 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h5 class="text-xl font-semibold">شخصی سازی پیشرفته</h5>
-                            <p class="text-[#565656]">شما میتوانید DNS اختصاصی خود را ذخیره کنید و دفعات بعد از آن
+                            <h5 id="featureTitleFive" class="text-xl font-semibold">شخصی سازی پیشرفته</h5>
+                            <p id="featureDescriptionFive" class="text-[#565656]">شما میتوانید DNS اختصاصی خود را ذخیره
+                                کنید و دفعات بعد از آن
                                 استفاده کنید.</p>
                         </div>
                         <div
@@ -229,22 +259,24 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h5 class="text-xl font-semibold">امنیت بالا</h5>
-                            <p class="text-[#565656]">برنامه به صورت اوپن سورس منتشر شده و هیچگونه مشکل امنیتی ای وجود
+                            <h5 id="featureTitleSix" class="text-xl font-semibold">امنیت بالا</h5>
+                            <p id="featureDescriptionSix" class="text-[#565656]">برنامه به صورت اوپن سورس منتشر شده و
+                                هیچگونه مشکل امنیتی ای وجود
                                 ندارد.</p>
                         </div>
                     </div>
                 </section>
                 <!-- Team -->
-                <section id="team" class="flex flex-col gap-12 pt-12">
+                <section id="contributors" class="flex flex-col gap-12 pt-12">
                     <div class="space-y-2 flex flex-col justify-center items-center">
-                        <h4 class="text-2xl font-[peyda] text-center">مشارکت کنندگان</h4>
-                        <p class="text-lg font-[peyda] text-center text-[#565656]">لیست کسایی که به توسعه این ابزار کمک
+                        <h4 id="contributorsTitle" class="text-2xl text-center">مشارکت کنندگان</h4>
+                        <p id="contributorsDescription" class="text-lg text-center text-[#565656]">لیست
+                            کسایی که به توسعه این ابزار کمک
                             میکنند. شما هم
                             میتونید جزئی از این لیست
                             باشید.</p>
                     </div>
-                    <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-5 font-[peyda]">
+                    <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-5">
                         <div
                             class="transition duration-300 cursor-pointer hover:shadow-md px-5 py-4 rounded-md border-[#dddddd] border-[2px] flex flex-col gap-3 items-center">
                             <div class="rounded-full bg-[#EDEEEF] size-40 flex justify-center items-center">
@@ -335,19 +367,21 @@
                 <!-- QA -->
                 <section id="qa" class="flex flex-col gap-12 mt-12 pb-14">
                     <div class="space-y-2 flex flex-col justify-center items-center">
-                        <h4 class="text-2xl font-[peyda] text-center">سوالات پر تکرار</h4>
-                        <p class="text-lg font-[peyda] text-center text-[#565656] max-w-[70ch]">جواب سوالاتی که ممکن از
+                        <h4 id="questionsTitle" class="text-2xl text-center">سوالات پر تکرار</h4>
+                        <p id="questionsDescription" class="text-lg text-center text-[#565656] max-w-[70ch]">جواب
+                            سوالاتی که ممکن از
                             شما هم داشته
                             باشید در زیر آمده است، در صورتی که سوالات متفاوتی داشتید می توانید از طریق راه های
                             ارتباطی آنها را بپرسید.</p>
                     </div>
-                    <div dir="ltr" class="mt-10 flex flex-col items-center gap-5 font-[peyda]">
+                    <div dir="ltr" class="mt-10 flex flex-col items-center gap-5">
                         <div tabindex="0" class="collapse collapse-arrow border border-[#D9D9DA] max-w-[700px] px-2">
-                            <div class="collapse-title text-lg font-semibold text-right">
+                            <div class="collapse-title text-lg font-medium text-right">
                                 چطوری میتوانم در این پروژه نقشی ایفا کنم وباعث توسعه سریع تر این برنامه بشم؟
                             </div>
                             <div class="collapse-content">
-                                <p class="text-right">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                <p class="text-right text-[#565656]">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                                    صنعت چاپ، و با
                                     استفاده از طراحان
                                     گرافیک است، چاپگرها و متون بلکه
                                     روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
@@ -355,11 +389,12 @@
                             </div>
                         </div>
                         <div tabindex="0" class="collapse collapse-arrow border border-[#D9D9DA] max-w-[700px] px-2">
-                            <div class="collapse-title text-lg font-semibold text-right">
+                            <div class="collapse-title text-lg font-medium text-right">
                                 چطور میتوانم از این پروژه حمایت کنم تا امکانات جدیدتر زودتر در برنامه قرار گیرند؟
                             </div>
                             <div class="collapse-content">
-                                <p class="text-right">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                <p class="text-right text-[#565656]">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                                    صنعت چاپ، و با
                                     استفاده از طراحان
                                     گرافیک است، چاپگرها و متون بلکه
                                     روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
@@ -367,11 +402,12 @@
                             </div>
                         </div>
                         <div tabindex="0" class="collapse collapse-arrow border border-[#D9D9DA] max-w-[700px] px-2">
-                            <div class="collapse-title text-lg font-semibold text-right">
+                            <div class="collapse-title text-lg font-medium text-right">
                                 نحوه دقیق کارکرد برنامه به چه صورتی می باشد؟
                             </div>
                             <div class="collapse-content">
-                                <p class="text-right">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                <p class="text-right text-[#565656]">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                                    صنعت چاپ، و با
                                     استفاده از طراحان
                                     گرافیک است، چاپگرها و متون بلکه
                                     روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
@@ -385,7 +421,7 @@
     <footer class="py-2 bg-[#02141A] px-10">
         <div
             class="max-w-[1200px] flex md:flex-row flex-col-reverse justify-between items-center mx-auto md:gap-0 gap-5">
-            <div class="font-[peyda] text-white basis-[70%] md:p-0 pb-5 md:text-right text-center">
+            <div id="footerText" class="text-white basis-[70%] md:p-0 pb-5 md:text-right text-center">
                 ©2024 تمامی محتویات و کدهای این پروژه تحت مجوز MIT منتشر شده‌اند. شما می‌توانید به‌صورت آزاد از این
                 پروژه استفاده کنید و
                 حقوق مالکیت فکری آن متعلق به توسعه‌دهندگان اصلی می‌باشد.
@@ -395,14 +431,7 @@
             </div>
         </div>
     </footer>
-    <script src="../public/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            speed: 400,
-            spaceBetween: 100,
-        });
-    </script>
+    <script type="module" src="../public/js/script.js"></script>
 </body>
 
 </html>

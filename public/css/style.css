@@ -1,57 +1,77 @@
 /* Font faces */
 @font-face {
     font-family: Kalameh-Bold;
-    src: url("../fonts/Kalameh-Bold.ttf");
+    src: url("../assets/fonts/Kalameh-Bold.ttf");
 }
 
 @font-face {
     font-family: Kalameh-Regular;
-    src: url("../fonts/Kalameh-Regular.ttf");
+    src: url("../assets/fonts/Kalameh-Regular.ttf");
 }
 
 @font-face {
     font-family: Kalameh-Medium;
-    src: url("../fonts/Kalameh-Medium.ttf");
+    src: url("../assets/fonts/Kalameh-Medium.ttf");
 }
 
 @font-face {
     font-family: Kalameh-Black;
-    src: url("../fonts/Kalameh-Black.ttf");
+    src: url("../assets/fonts/Kalameh-Black.ttf");
 }
 
 @font-face {
     font-family: Kalameh-Thin;
-    src: url("../fonts/Kalameh-Thin.ttf");
+    src: url("../assets/fonts/Kalameh-Thin.ttf");
 }
 
 @font-face {
     font-family: Kalameh-Light;
-    src: url("../fonts/Kalameh-Light.ttf");
+    src: url("../assets/fonts/Kalameh-Light.ttf");
 }
 
 @font-face {
     font-family: Kalameh-ExtraLight;
-    src: url("../fonts/Kalameh-ExtraLight.ttf");
+    src: url("../assets/fonts/Kalameh-ExtraLight.ttf");
 }
 
 @font-face {
     font-family: peyda-bold;
-    src: url("../fonts/PEYDA-BOLD.TTF");
+    src: url("../assets/fonts/PEYDA-BOLD.TTF");
 }
 
 @font-face {
     font-family: peyda-medium;
-    src: url("../fonts/PEYDA-MEDIUM.TTF");
+    src: url("../assets/fonts/PEYDA-MEDIUM.TTF");
 }
 
 @font-face {
     font-family: peyda-regular;
-    src: url("../fonts/PEYDA-REGULAR.TTF");
+    src: url("../assets/fonts/PEYDA-REGULAR.TTF");
 }
 
 @font-face {
     font-family: peyda-thin;
-    src: url("../fonts/PEYDA-THIN.TTF");
+    src: url("../assets/fonts/PEYDA-THIN.TTF");
+}
+
+@font-face {
+    font-family: Rubik-Regular;
+    src: url("../assets/fonts/Rubik-Regular.ttf");
+}
+
+@font-face {
+    font-family: Rubik-Bold;
+    src: url("../assets/fonts/Rubik-Bold.ttf");
+}
+
+@font-face {
+    font-family: Rubik-Light;
+    src: url("../assets/fonts/Rubik-Light.ttf");
+}
+
+@font-face {
+    font-family: Rubik-SemiBold;
+    src: url("../assets/fonts/Kalameh-SemiBold.ttf");
 }
 
 .div-path {

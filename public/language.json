@@ -1,0 +1,122 @@
+{
+    "fa": {
+        "navbar": {
+            "home": "خانه",
+            "features": "ویژگی ها",
+            "contributors": "مشارکت کنندگان",
+            "questions": "سوالات پر تکرار"
+        },
+        "appDescription": "یک نرم افزار متن باز است که با استفاده از آن، کاربران می‌توانند به سادگی تنظیمات DNS خود را تغییر دهند و به این ترتیب، از دسترسی به اینترنت با سرعت و کارایی بالاتری برخوردار شوند.",
+        "downloadTitle": "دانلود برای سیستم عامل های مختلف:",
+        "platforms": {
+            "windows": "ویندوز",
+            "linux": "لینوکس",
+            "mac": "مک",
+            "cmd": "تحت فرمان"
+        },
+        "popularDNS": {
+            "title" : "پشتیبانی از سرویس های محبوب",
+            "shecan": "شکن",
+            "electro": " الکترو",
+            "Online403": "403 آنلاین",
+            "cloudflare": "کلادفلر"
+        },
+        "featuresSection": {
+            "title": "ویژگی های برنامه",
+            "featureOne": {
+                "title": "تغییر آسان DNS رایانه شخصی",
+                "description": "به سادگی و به سرعت می توانید DNS سیستم خود را تغییر دهید"
+            },
+            "featureTwo": {
+                "title": "پشتیبانی از DNS ها ی مختلف",
+                "description": "بیشتر از 3000 DNS را به خوبی پشتیبانی میکند."
+            },
+            "featureThree": {
+                "title": "نگران هیچ محدودیتی نباشید",
+                "description": "در اینترنت شما هیچ محدودیتی ایجاد نخواهد شد."
+            },
+            "featureFour": {
+                "title": "امکان دسته بندی",
+                "description": "با استفاده از دسته بندی میتوانید سرور مورد نیاز خود را به راحتی پیدا کنید."
+            },
+            "featureFive": {
+                "title": "شخصی سازی پیشرفته",
+                "description": "شما میتوانید DNS اختصاصی خود را ذخیره کنید و دفعات بعد از آن استفاده کنید."
+            },
+            "featureSix": {
+                "title": "امنیت بالا",
+                "description": "برنامه به صورت اوپن سورس منتشر شده و هیچگونه مشکل امنیتی ای وجود ندارد."
+            }
+        },
+        "dontForgotStar": "بعد از نصب ⭐ فراموش نشه",
+        "contributorsSection": {
+            "title": "مشارکت کنندگان",
+            "description": "لیست کسایی که به توسعه این ابزار کمک میکنند. شما هم میتونید جزئی از این لیست باشید."
+        },
+        "questionSection": {
+            "title": "سوالات پر نکرار",
+            "description": "جواب سوالاتی که ممکن از شما هم داشته باشید در زیر آمده است، در صورتی که سوالات متفاوتی داشتید می توانید از طریق راه های ارتباطی آنها را بپرسید."
+        },
+        "footerText": "©2024 تمامی محتویات و کدهای این پروژه تحت مجوز MIT منتشر شده‌اند. شما می‌توانید به‌صورت آزاد از این پروژه استفاده کنید و حقوق مالکیت فکری آن متعلق به توسعه‌دهندگان اصلی می‌باشد."
+    },
+    "en": {
+        "navbar": {
+            "home": "Home",
+            "features": "Features",
+            "contributors": "Contributors",
+            "questions": "Questions"
+        },
+        "appDescription": "It is an open source software that allows users to easily change their DNS settings and in this way, access the Internet with higher speed and efficiency.",
+        "downloadTitle": "Download for different operating systems:",
+        "platforms": {
+            "windows": "Windows",
+            "linux": "Linux",
+            "mac": "Mac",
+            "cmd": "CMD"
+        },
+        "popularDNS": {
+            "title": "Support for popular services",
+            "shecan": "Shecan",
+            "electro": " Electro",
+            "Online403": "403 Online",
+            "cloudflare": "Cloudflare"
+        },
+        "featuresSection": {
+            "title": "Features",
+            "featureOne": {
+                "title": "Easy And Fast",
+                "description": "You can easily and quickly change the DNS of your system"
+            },
+            "featureTwo": {
+                "title": "Support All Type Of DNS",
+                "description": "It supports more than 3000 DNS well."
+            },
+            "featureThree": {
+                "title": "Don't worry about any limits",
+                "description": "There will be no restrictions on your internet."
+            },
+            "featureFour": {
+                "title": "Categorization possibility",
+                "description": "Using categories, you can easily find the server you need."
+            },
+            "featureFive": {
+                "title": "Advanced Personalization",
+                "description": "You can save your own DNS and use it later."
+            },
+            "featureSix": {
+                "title": "High security",
+                "description": "The program is published as open source and there are no security problems."
+            }
+        },
+        "dontForgotStar": "After installation ⭐ do not forget",
+        "contributorsSection": {
+            "title": "Contributors",
+            "description": "A list of people who help develop this tool. You can be a part of this list."
+        },
+        "questionSection": {
+            "title": "Frequently asked questions",
+            "description": "The answers to the questions that you may have are given below, if you have different questions, you can ask them through communication channels."
+        },
+        "footerText": "©2024 All contents and code of this project are released under the MIT license. You can freely use this project and its intellectual property rights belong to the original developers."
+    }
+}
