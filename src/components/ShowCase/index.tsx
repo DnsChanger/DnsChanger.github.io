@@ -22,13 +22,13 @@ export default function ShowCase() {
           </h1>
           <div>
             <p className="text-xl font-light text-justify text-gray-600">
-              یک نرم افزار متن باز است که با استفاده از آن، کاربران می‌توانند با
+              یک نرم‌افزار متن‌باز است که با استفاده از آن، کاربران می‌توانند با
               سادگی تنظیمات DNS خود را تغییر دهند و به این ترتیب، از دسترسی به
               اینترنت با سرعت و کارایی بالاتری برخوردار شوند.
             </p>
             <div className="mt-10">
               <p className="text-xl text-gray-700 self-start mb-2">
-                دنلود برای سیستم عامل های مختلف:
+                بارگیری برای سیستم‌عامل‌های مختلف:
               </p>
               <div className="flex flex-col items-center divide-y-2">
                 <div className="w-full flex flex-row flex-wrap  mb-8 gap-3">
@@ -61,7 +61,7 @@ export default function ShowCase() {
                     onClick={() => onClick(NPM_URL)}
                   >
                     <FiTerminal size={30} />
-                    <p className="text-gray-500 text-sm">تحت فرمان</p>
+                    <p className="text-gray-500 text-sm">تحت خط‌فرمان</p>
                   </div>
                 </div>
                 <div className="w-full pt-8 flex items-center justify-between">
