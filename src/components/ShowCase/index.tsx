@@ -2,6 +2,30 @@ import React from "react";
 import { RiUbuntuFill, RiAndroidFill } from "react-icons/ri";
 import { AiFillApple, AiFillWindows } from "react-icons/ai";
 import { FiTerminal } from "react-icons/fi";
+import { SiGithub } from "react-icons/si";
+
+interface PlatformCardProps {
+  icon: React.ReactNode;
+  label: string;
+  sub: string;
+  onClick: () => void;
+  accentClass: string;
+}
+
+function PlatformCard({ icon, label, sub, onClick, accentClass }: PlatformCardProps) {
+  return (
+    <div
+      onClick={onClick}
+      className={`group flex flex-col items-center justify-center p-5 rounded-2xl cursor-pointer transition-all duration-300 glass-card hover:scale-[1.04] hover:ring-1 ${accentClass}`}
+    >
+      <div className="mb-3  transition-transform duration-300 group-hover:scale-110">
+        {icon}
+      </div>
+      <p className="text-sm font-bold text-white">{label}</p>
+      <span className="text-[11px] text-gray-500 mt-0.5">{sub}</span>
+    </div>
+  );
+}
 
 export default function ShowCase() {
   const DESKTOP_RELEASES_URL =
@@ -15,98 +39,91 @@ export default function ShowCase() {
   }
 
   return (
-    <header className="py-16 md:py-24 px-4 bg-slate-900 text-white border-b border-slate-800">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        <div className="flex-1 space-y-6 text-right">
-          <div
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-800/80 text-emerald-400 text-sm font-semibold cursor-pointer hover:bg-emerald-900/80 transition-all shadow-sm"
-            onClick={() => onClick(MOBILE_RELEASES_URL)}
-          >
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>📱 نسخه اندروید (موبایل) منتشر شد!</span>
-            <span className="bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">جدید</span>
+    <header className="relative overflow-hidden py-20 md:py-32 px-5">
+      <div
+        className="hero-glow w-[600px] h-[600px] top-[-200px] right-[-100px] bg-emerald-500/10 animate-glow-pulse"
+        aria-hidden="true"
+      />
+      <div
+        className="hero-glow w-[400px] h-[400px] bottom-[-100px] left-[-50px] bg-emerald-700/8 animate-glow-pulse"
+        style={{ animationDelay: "1.5s" }}
+        aria-hidden="true"
+      />
+
+      <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <div className="flex-1 space-y-8 text-right animate-fade-up">
+          <div>
+            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-tight mb-5">
+              DNS Changer
+            </h1>
+            <p className="text-base md:text-lg text-gray-400 leading-loose text-justify max-w-xl">
+              یک ابزار رایگان و متن‌باز برای مدیریت و تغییر سریع تنظیمات DNS در دسکتاپ و موبایل. با استفاده از این برنامه می‌توانید به سادگی از DNSهای امن و سریع استفاده کنید.
+            </p>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            DNS Changer
-          </h1>
-
-          <p className="text-lg md:text-xl font-normal text-slate-300 leading-relaxed text-justify">
-            یک ابزار رایگان و متن‌باز برای مدیریت و تغییر سریع تنظیمات DNS در دسکتاپ و موبایل. با استفاده از این برنامه می‌توانید به سادگی از DNSهای امن و سریع استفاده کنید.
-          </p>
-
-          <div className="pt-4 space-y-4">
-            <p className="text-base font-bold text-slate-200">
-              دانلود برای سیستم‌عامل‌های مختلف:
+          <div className="space-y-4 animate-fade-up-delay-1">
+            <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">
+              دانلود برای سیستم‌عامل‌های مختلف
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-              <div
-                className="flex flex-col items-center justify-center p-4 rounded-2xl border border-slate-700/80 bg-slate-800/80 hover:bg-slate-800 hover:border-emerald-500 cursor-pointer transition-all duration-200 group relative shadow-sm"
+              <PlatformCard
+                icon={<RiAndroidFill size={30} className="text-emerald-400" />}
+                label="اندروید"
+                sub="APK"
                 onClick={() => onClick(MOBILE_RELEASES_URL)}
-              >
-                <span className="absolute -top-2 -right-2 bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shadow-sm">
-                  موبایل
-                </span>
-                <RiAndroidFill size={32} className="text-slate-300 group-hover:text-emerald-400 transition-colors" />
-                <p className="text-sm font-bold text-white mt-2">اندروید</p>
-                <span className="text-[11px] text-slate-400 mt-0.5">APK / Mobile</span>
-              </div>
-
-              <div
-                className="flex flex-col items-center justify-center p-4 rounded-2xl border border-slate-700/80 bg-slate-800/80 hover:bg-slate-800 hover:border-blue-500 cursor-pointer transition-all duration-200 group shadow-sm"
+                accentClass="hover:ring-emerald-500/30"
+              />
+              <PlatformCard
+                icon={<AiFillWindows size={30} className="text-sky-400" />}
+                label="ویندوز"
+                sub="Desktop"
                 onClick={() => onClick(DESKTOP_RELEASES_URL)}
-              >
-                <AiFillWindows size={32} className="text-slate-300 group-hover:text-blue-400 transition-colors" />
-                <p className="text-sm font-bold text-white mt-2">ویندوز</p>
-                <span className="text-[11px] text-slate-400 mt-0.5">Desktop</span>
-              </div>
-
-              <div
-                className="flex flex-col items-center justify-center p-4 rounded-2xl border border-slate-700/80 bg-slate-800/80 hover:bg-slate-800 hover:border-amber-500 cursor-pointer transition-all duration-200 group shadow-sm"
+                accentClass="hover:ring-sky-500/30"
+              />
+              <PlatformCard
+                icon={<RiUbuntuFill size={30} className="text-orange-400" />}
+                label="لینوکس"
+                sub="Desktop"
                 onClick={() => onClick(DESKTOP_RELEASES_URL)}
-              >
-                <RiUbuntuFill size={32} className="text-slate-300 group-hover:text-amber-400 transition-colors" />
-                <p className="text-sm font-bold text-white mt-2">لینوکس</p>
-                <span className="text-[11px] text-slate-400 mt-0.5">Desktop</span>
-              </div>
-
-              <div
-                className="flex flex-col items-center justify-center p-4 rounded-2xl border border-slate-700/80 bg-slate-800/80 hover:bg-slate-800 hover:border-purple-500 cursor-pointer transition-all duration-200 group shadow-sm"
+                accentClass="hover:ring-orange-500/30"
+              />
+              <PlatformCard
+                icon={<AiFillApple size={30} className="text-violet-400" />}
+                label="مک"
+                sub="Desktop"
                 onClick={() => onClick(DESKTOP_RELEASES_URL)}
-              >
-                <AiFillApple size={32} className="text-slate-300 group-hover:text-purple-400 transition-colors" />
-                <p className="text-sm font-bold text-white mt-2">مک</p>
-                <span className="text-[11px] text-slate-400 mt-0.5">Desktop</span>
-              </div>
-
-              <div
-                className="flex flex-col items-center justify-center p-4 rounded-2xl border border-slate-700/80 bg-slate-800/80 hover:bg-slate-800 hover:border-slate-400 cursor-pointer transition-all duration-200 group shadow-sm"
+                accentClass="hover:ring-violet-500/30"
+              />
+              <PlatformCard
+                icon={<FiTerminal size={28} className="text-gray-300" />}
+                label="خط فرمان"
+                sub="CLI / NPM"
                 onClick={() => onClick(NPM_URL)}
-              >
-                <FiTerminal size={32} className="text-slate-300 group-hover:text-white transition-colors" />
-                <p className="text-sm font-bold text-white mt-2">خط فرمان</p>
-                <span className="text-[11px] text-slate-400 mt-0.5">CLI / NPM</span>
-              </div>
-            </div>
-
-            <div className="pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
-              <p className="text-sm text-slate-400 font-medium">⭐ حمایت از پروژه با دادن ستاره در گیت‌هاب</p>
-              <div className="flex flex-wrap items-center gap-2" dir="ltr">
-                <img src="https://img.shields.io/github/stars/DnsChanger/dnsChanger-desktop?label=Desktop%20Stars" alt="Desktop Stars" />
-                <img src="https://img.shields.io/github/stars/DnsChanger/dnschanger-mobile?label=Mobile%20Stars" alt="Mobile Stars" />
-              </div>
+                accentClass="hover:ring-gray-500/30"
+              />
             </div>
           </div>
+
+  
         </div>
 
-        <div className="flex-1 w-full max-w-md md:max-w-none">
-          <div className="rounded-3xl border border-slate-800 bg-slate-950 p-4 shadow-2xl overflow-hidden">
-            <img width="100%" alt="DNS Changer" src="app.png" className="rounded-2xl" />
+        <div className="flex-1 w-full max-w-md md:max-w-none animate-fade-up-delay-3">
+          <div className="animate-float relative">
+            <div className="absolute inset-0 rounded-3xl bg-emerald-500/5 blur-2xl scale-95 animate-glow-pulse" />
+            <div className="relative rounded-3xl p-[1px] bg-white/[0.06]">
+              <div className="rounded-3xl overflow-hidden bg-[#0f1117] p-2">
+                <img
+                  width="100%"
+                  alt="DNS Changer App"
+                  src="app.png"
+                  className="rounded-2xl w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
   );
 }
-

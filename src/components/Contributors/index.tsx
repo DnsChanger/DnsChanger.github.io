@@ -13,34 +13,37 @@ export default function Contributors() {
   }, []);
 
   return (
-    <section className="bg-slate-900 py-20 px-4 text-white border-b border-slate-800">
-      <div className="max-w-6xl mx-auto space-y-10">
-        <div className="flex flex-col gap-3 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">مشارکت‌کنندگان</h2>
-          <p className="text-slate-400 text-base max-w-xl mx-auto">
+    <section className="py-24 px-5 border-t border-white/[0.06]">
+      <div className="max-w-6xl mx-auto space-y-12">
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-3">مشارکت‌کنندگان</h2>
+          <p className="text-gray-500 text-sm max-w-lg mx-auto leading-relaxed">
             افرادی که به توسعه این ابزار متن‌باز کمک می‌کنند. شما هم می‌توانید با مشارکت در کدهای پروژه جزئی از این لیست باشید.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {contributors.map((user: User, index: number) => (
             <a
               key={index}
               target="_blank"
               href={user.html_url}
-              className="cursor-pointer rounded-2xl select-none text-center border border-slate-800 bg-slate-800/60 p-6 transition-all hover:bg-slate-800 hover:border-slate-700 shadow-md flex items-center gap-4"
+              className="group flex items-center gap-4 p-4 rounded-2xl glass-card hover:bg-white/[0.06] hover:border-white/[0.12] transition-all duration-300 select-none"
               rel="noreferrer"
             >
-              <img
-                src={user.avatar_url}
-                alt={`${user.login}'s avatar`}
-                width={60}
-                height={60}
-                className="rounded-xl flex-shrink-0"
-              />
-              <div className="flex-1 text-right">
-                <div className="text-lg font-bold text-white mb-1">{user.login}</div>
-                <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                  <SiGithub size={14} />
+              <div className="relative flex-shrink-0">
+                <img
+                  src={user.avatar_url}
+                  alt={`${user.login}'s avatar`}
+                  width={52}
+                  height={52}
+                  className="rounded-xl ring-1 ring-white/10 group-hover:ring-emerald-500/30 transition-all duration-300"
+                />
+              </div>
+              <div className="flex-1 text-right min-w-0">
+                <div className="text-sm font-bold text-white truncate mb-1">{user.login}</div>
+                <div className="flex items-center justify-end gap-1.5 text-xs font-medium text-gray-600 group-hover:text-emerald-500 transition-colors duration-300">
+                  <SiGithub size={12} />
                   <span>مشاهده پروفایل</span>
                 </div>
               </div>

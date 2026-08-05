@@ -2,52 +2,52 @@ import { SiDiscord, SiGithub } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 border-t border-slate-800 text-white py-12 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="font-normal text-sm text-slate-400 text-center md:text-right max-w-xl">
-            ©{new Date().getFullYear()} تمامی محتویات و کدهای این پروژه تحت
-            مجوز MIT منتشر شده‌اند. پروژه به صورت آزاد و متن‌باز توسط تیم DnsChanger توسعه داده می‌شود.
+    <footer className="border-t border-white/[0.06] py-10 px-5">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
+        <div className="flex items-center gap-3">
+          <img src="/logo.png" className="w-7 h-7 object-contain opacity-60" alt="DNS Changer" />
+          <p className="text-sm text-gray-600">
+            ©{new Date().getFullYear()} DNS Changer — منتشر شده تحت مجوز MIT
           </p>
+        </div>
 
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/DnsChanger/dnschanger-mobile"
-              target="_blank"
-              className="text-xs text-slate-300 hover:text-emerald-400 transition-colors font-medium"
-              rel="noreferrer"
-            >
-              نسخه موبایل
-            </a>
-            <span className="text-slate-700">•</span>
-            <a
-              href="https://github.com/DnsChanger/dnsChanger-desktop"
-              target="_blank"
-              className="text-xs text-slate-300 hover:text-blue-400 transition-colors font-medium"
-              rel="noreferrer"
-            >
-              نسخه دسکتاپ
-            </a>
-            <span className="text-slate-700">•</span>
-            <a
-              href="https://github.com/dnsChanger"
-              target="_blank"
-              className="text-slate-400 hover:text-white transition-colors"
-              rel="noreferrer"
-              title="GitHub Organization"
-            >
-              <SiGithub size={20} />
-            </a>
-            <a
-              href="https://discord.gg/p9TZzEV39e"
-              target="_blank"
-              className="text-slate-400 hover:text-[#5865F2] transition-colors"
-              rel="noreferrer"
-              title="Discord Community"
-            >
-              <SiDiscord size={20} />
-            </a>
-          </div>
+        <div className="flex items-center gap-5">
+          <a
+            href="https://github.com/DnsChanger/dnschanger-mobile"
+            target="_blank"
+            className="text-xs text-gray-600 hover:text-gray-300 transition-colors duration-200 font-medium"
+            rel="noreferrer"
+          >
+            نسخه موبایل
+          </a>
+          <span className="w-px h-3.5 bg-white/10" />
+          <a
+            href="https://github.com/DnsChanger/dnsChanger-desktop"
+            target="_blank"
+            className="text-xs text-gray-600 hover:text-gray-300 transition-colors duration-200 font-medium"
+            rel="noreferrer"
+          >
+            نسخه دسکتاپ
+          </a>
+          <span className="w-px h-3.5 bg-white/10" />
+          <a
+            href="https://github.com/dnsChanger"
+            target="_blank"
+            className="text-gray-600 hover:text-white transition-colors duration-200"
+            rel="noreferrer"
+            title="GitHub Organization"
+          >
+            <SiGithub size={18} />
+          </a>
+          <a
+            href="https://discord.gg/p9TZzEV39e"
+            target="_blank"
+            className="text-gray-600 hover:text-[#7289da] transition-colors duration-200"
+            rel="noreferrer"
+            title="Discord Community"
+          >
+            <SiDiscord size={18} />
+          </a>
         </div>
       </div>
     </footer>

@@ -8,7 +8,7 @@ import Contributors from "../Contributors";
 
 export default function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-950 text-white font-sans">
+    <div className="flex flex-col min-h-screen bg-[#0a0c10] text-gray-100 font-sans">
       <NavBar />
       <ShowCase />
       <Features />
